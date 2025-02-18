@@ -58,7 +58,7 @@ app.post("/api/v1/signin", async (req, res) => { // Added leading slash
     if (user) {
       const token = jwt.sign(
         {
-          id: user._id, // Include only the user ID
+          id: user._id, 
         },
         JWT_SECRET,
         { expiresIn: "1h" } // Optional: Add token expiration
@@ -148,6 +148,7 @@ app.get("/api/v1/txn", async (req, res) => {
     res.status(500).json({ error: "Failed to fetch transaction status", details: error.message });
   }
 });
+console.log("yayyyy")
 
 
 mongoose.connect(MONGO_URI, {
