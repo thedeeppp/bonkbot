@@ -14,6 +14,7 @@ const connection = new Connection("https://solana-devnet.g.alchemy.com/v2/_rGzl0
 
 app.use(cors())
 app.use(json());
+
 const MONGO_URI = "mongodb://localhost:27017/"; 
 // Signup Route
 app.post("/api/v1/signup", async (req, res) => { 
